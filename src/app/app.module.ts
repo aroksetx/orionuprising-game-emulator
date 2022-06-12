@@ -8,6 +8,9 @@ import { PlayerHandComponent } from './components/player-hand/player-hand.compon
 import { CardComponent } from './components/card/card.component';
 import { DeckComponent } from './components/deck/deck.component';
 import {routes} from './app.route';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { GameUserListComponent } from './components/game-user-list/game-user-list.component';
+import { GameRunnerComponent } from './components/game-runner/game-runner.component';
 
 @NgModule({
   imports: [
@@ -20,6 +23,9 @@ import {routes} from './app.route';
     PlayerHandComponent,
     CardComponent,
     DeckComponent,
+    UserProfileComponent,
+    GameUserListComponent,
+    GameRunnerComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
