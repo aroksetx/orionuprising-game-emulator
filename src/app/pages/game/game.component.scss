@@ -1,3 +1,5 @@
+@import "../../../assets/styles/card";
+
 app-player-hand {
   position: absolute;
   bottom: 10px;
@@ -28,12 +30,19 @@ app-dice {
 }
 
 .deck {
+  @include card(80px, 120px);
+  @include disable-card-animation;
+  font-size: 35px;
+}
+
+.neutral-planets {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 150px;
-  font-size: 50px;
-  border: solid 1px white;
-  border-radius: 5px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  app-neutral-planet + app-neutral-planet {
+    margin-left: 20px;
+  }
 }

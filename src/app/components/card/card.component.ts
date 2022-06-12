@@ -1,12 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Card} from '../../interfaces/card';
-
-export enum PlanetType {
-  EARTH = 'fa-earth-americas',
-  EUROPE = 'fa-earth-europe',
-  SATURN = 'fa-planet-ringed',
-  MOON = 'fa-planet-moon',
-}
+import {PlanetType} from '../../interfaces/planet-type';
 
 @Component({
   selector: 'app-card',

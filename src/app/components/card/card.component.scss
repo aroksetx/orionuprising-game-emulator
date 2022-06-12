@@ -1,19 +1,7 @@
-:host {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100px;
-  height: 150px;
-  border: solid 1px white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 300ms;
+@import "card";
 
-  &:hover {
-    transform: translateY(-5px);
-  }
+:host {
+  @include card;
 }
 
 i[class^="fa-"] {

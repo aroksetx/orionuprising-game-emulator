@@ -9,6 +9,7 @@ import { CardComponent } from './components/card/card.component';
 import { DeckComponent } from './components/deck/deck.component';
 import {routes} from './app.route';
 import { DiceComponent } from './components/dice/dice.component';
+import { NeutralPlanetComponent } from './components/neutral-planet/neutral-planet.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { DiceComponent } from './components/dice/dice.component';
     CardComponent,
     DeckComponent,
     DiceComponent,
+    NeutralPlanetComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
