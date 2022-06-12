@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+}
+
+.cards {
+  display: flex;
+
+  app-card + app-card {
+    margin-left: 15px;
+  }
+}
