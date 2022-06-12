@@ -1,11 +1,27 @@
 :host {
+  position: relative;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deck {
+  position: absolute;
+  left: 50px;
+  font-size: 120px;
+  cursor: pointer;
+  transition: transform 300ms;
+
+  &:hover {
+    transform: scale(1.07);
+  }
 }
 
 .cards {
   display: flex;
 
   app-card + app-card {
-    margin-left: 15px;
+    margin-left: 20px;
   }
 }

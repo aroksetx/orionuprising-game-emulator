@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanetType } from '../card/card.component';
 
 @Component({
   selector: 'app-player-hand',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player-hand.component.scss']
 })
 export class PlayerHandComponent implements OnInit {
+  PlanetType = PlanetType;
 
   constructor() { }
 
