@@ -8,6 +8,7 @@ import { PlayerHandComponent } from './components/player-hand/player-hand.compon
 import { CardComponent } from './components/card/card.component';
 import { DeckComponent } from './components/deck/deck.component';
 import {routes} from './app.route';
+import { DiceComponent } from './components/dice/dice.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import {routes} from './app.route';
     PlayerHandComponent,
     CardComponent,
     DeckComponent,
+    DiceComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

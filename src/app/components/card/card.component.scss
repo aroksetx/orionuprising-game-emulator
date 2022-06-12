@@ -18,4 +18,32 @@
 
 i[class^="fa-"] {
   font-size: 50px;
+  margin-top: -15px;
+}
+
+.activation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 15px;
+  top: -8px;
+
+  border-radius: 15px;
+  border: solid 1px white;
+  background: #1e232d;
+}
+
+.resources {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 10px;
+
+  i.resource {
+    margin-right: 10px;
+    font-size: 14px;
+  }
 }

@@ -2,3 +2,38 @@ app-player-hand {
   position: absolute;
   bottom: 10px;
 }
+
+app-dice {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.market-and-cataclysm {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.deck-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.deck-wrap + .deck-wrap {
+  margin-top: 20px;
+}
+
+.deck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 150px;
+  font-size: 50px;
+  border: solid 1px white;
+  border-radius: 5px;
+}
