@@ -1,0 +1,9 @@
+<div>
+    <div>Game dashboard</div>
+    <div>
+        Users: {{users | json}}
+    </div>
+
+    <input type="text" placeholder="Username" #username>
+    <button (click)="addUserToRoom(username.value)">Add user</button>
+</div>
