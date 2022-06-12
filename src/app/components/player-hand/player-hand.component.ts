@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlanetType } from '../card/card.component';
+import { PlanetType } from 'src/app/interfaces/planet-type';
 
 @Component({
   selector: 'app-player-hand',

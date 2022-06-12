@@ -1,4 +1,48 @@
+@import "../../../assets/styles/card";
+
 app-player-hand {
   position: absolute;
   bottom: 10px;
+}
+
+app-dice {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.market-and-cataclysm {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.deck-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.deck-wrap + .deck-wrap {
+  margin-top: 20px;
+}
+
+.deck {
+  @include card(80px, 120px);
+  @include disable-card-animation;
+  font-size: 35px;
+}
+
+.neutral-planets {
+  display: flex;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  app-neutral-planet + app-neutral-planet {
+    margin-left: 20px;
+  }
 }

@@ -1,0 +1,31 @@
+$default-card-width: 100px;
+$default-card-height: 150px;
+
+@mixin card(
+  $card-width: $default-card-width,
+  $card-height: $default-card-height
+) {
+  display: flex;
+  width: $card-width;
+  height: $card-height;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: solid 1px white;
+  border-radius: 5px;
+
+  transition: transform 300ms;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-15px);
+  }
+}
+
+@mixin disable-card-animation {
+  &:hover {
+    transform: translateY(0);
+  }
+}

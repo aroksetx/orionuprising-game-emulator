@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+}
+
+i.dice {
+  font-size: 45px;
+}
+
+.dice + .dice {
+  margin-left: 15px;
+}

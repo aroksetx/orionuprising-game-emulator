@@ -8,6 +8,8 @@ import { PlayerHandComponent } from './components/player-hand/player-hand.compon
 import { CardComponent } from './components/card/card.component';
 import { DeckComponent } from './components/deck/deck.component';
 import {routes} from './app.route';
+import { DiceComponent } from './components/dice/dice.component';
+import { NeutralPlanetComponent } from './components/neutral-planet/neutral-planet.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { GameUserListComponent } from './components/game-user-list/game-user-list.component';
 import { GameRunnerComponent } from './components/game-runner/game-runner.component';
@@ -23,6 +25,8 @@ import { GameRunnerComponent } from './components/game-runner/game-runner.compon
     PlayerHandComponent,
     CardComponent,
     DeckComponent,
+    DiceComponent,
+    NeutralPlanetComponent,
     UserProfileComponent,
     GameUserListComponent,
     GameRunnerComponent,

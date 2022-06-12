@@ -27,9 +27,7 @@
       "dom"
     ],
     "paths": {
-      "path": [
-        "./node_modules/path-browserify"
-      ]
+      "@assets/*": ["assets/*"]
     }
   },
   "angularCompilerOptions": {
