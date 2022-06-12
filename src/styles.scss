@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+body {
+  background: rgb(17,20,23);
+  background: linear-gradient(135deg,
+          rgb(17,20,23) 0%,
+          rgb(32, 39, 49) 40%,
+          rgb(31 39 49) 50%,
+          rgb(32, 39, 49) 60%,
+          rgb(1,1,1,1) 100%);
+}
+
+.flex {
+  display: flex
+}
+
+.f1 {
+  flex: 1;
+}
+.f2 {
+  flex: 2;
+}
+.f3 {
+  flex: 3;
+}
+.f4 {
+  flex: 4;
+}

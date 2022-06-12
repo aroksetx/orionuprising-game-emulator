@@ -1,16 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { GameboardComponent } from './gameboard/gameboard.component';
+import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { GameComponent } from './pages/game/game.component';
+import { PlayerHandComponent } from './components/player-hand/player-hand.component';
+import { CardComponent } from './components/card/card.component';
+import { DeckComponent } from './components/deck/deck.component';
+import {routes} from './app.route';
 
 @NgModule({
-  declarations: [
-    GameboardComponent
-  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes),
+  ],
+  declarations: [
+    AppComponent,
+    GameComponent,
+    PlayerHandComponent,
+    CardComponent,
+    DeckComponent,
   ],
   providers: [],
-  bootstrap: [GameboardComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
