@@ -1,13 +1,14 @@
-<app-dice></app-dice>
+<div class="header">Current step: {{stepName}}</div>
+<app-dice [dice1]="board.dices.dice1" [dice2]="board.dices.dice2"></app-dice>
 
-<ng-template  [ngIf]="gameMessenger.users.length == 0" >
-    <app-game-runner></app-game-runner>
-</ng-template>
-<app-user-profile></app-user-profile>
-<app-game-user-list></app-game-user-list>
+<!--<ng-template  [ngIf]="gameMessenger.users.length == 0" >-->
+<!--    <app-game-runner></app-game-runner>-->
+<!--</ng-template>-->
+<!--<app-user-profile></app-user-profile>-->
+<!--<app-game-user-list></app-game-user-list>-->
 
 <div class="market-and-cataclysm">
-    <div class="deck-wrap">
+    <div class="deck-wrap" (click)="openMarket()">
         <div class="padding-bottom-s">Market</div>
         <i class="deck fa-light fa-store"></i>
     </div>
@@ -26,4 +27,20 @@
     <app-neutral-planet [type]="PlanetType.MOON"></app-neutral-planet>
 </div>
 
-<app-player-hand></app-player-hand>
+<app-player-hand [player]="board.currentPlayer"></app-player-hand>
+
+<div class="next-turn" (click)="nextTurn()">Next turn</div>
+
+<div *ngIf="showMarket" class="market-popup">
+    <div class="curtain"></div>
+    <div class="header">
+        <h4>Market</h4>
+        <i class="fa-solid fa-xmark" (click)="showMarket = false"></i>
+    </div>
+    <div class="body" (click)="showMarket = false">
+        <app-market-card></app-market-card>
+        <app-market-card></app-market-card>
+        <app-market-card></app-market-card>
+        <app-market-card></app-market-card>
+    </div>
+</div>

@@ -18,6 +18,17 @@ app-dice {
   transform: translateY(-50%);
 }
 
+.header {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+}
+
 .deck-wrap {
   display: flex;
   flex-direction: column;
@@ -43,6 +54,76 @@ app-dice {
   transform: translate(-50%, -50%);
 
   app-neutral-planet + app-neutral-planet {
+    margin-left: 20px;
+  }
+}
+
+$radius: 100px;
+.next-turn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: $radius;
+  height: $radius;
+  border-radius: $radius;
+  border: solid 1px white;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 150ms;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.market-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .curtain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    z-index: -1;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+
+    i.fa-xmark {
+      font-size: 20px;
+      margin-left: 30px;
+      transform: translateY(2px);
+      cursor: pointer;
+    }
+  }
+
+  .body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  app-market-card + app-market-card {
     margin-left: 20px;
   }
 }

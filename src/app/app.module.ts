@@ -13,6 +13,8 @@ import { NeutralPlanetComponent } from './components/neutral-planet/neutral-plan
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { GameUserListComponent } from './components/game-user-list/game-user-list.component';
 import { GameRunnerComponent } from './components/game-runner/game-runner.component';
+import {ArrayPipe} from './components/player-hand/number-to-array.pipe';
+import { MarketCardComponent } from './components/card/market-card/market-card.component';
 
 @NgModule({
   imports: [
@@ -30,6 +32,8 @@ import { GameRunnerComponent } from './components/game-runner/game-runner.compon
     UserProfileComponent,
     GameUserListComponent,
     GameRunnerComponent,
+    ArrayPipe,
+    MarketCardComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

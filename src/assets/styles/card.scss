@@ -1,3 +1,5 @@
+@import 'variables';
+
 $default-card-width: 100px;
 $default-card-height: 150px;
 
@@ -13,6 +15,7 @@ $default-card-height: 150px;
   justify-content: center;
   align-items: center;
 
+  background: $background-color;
   border: solid 1px white;
   border-radius: 5px;
 

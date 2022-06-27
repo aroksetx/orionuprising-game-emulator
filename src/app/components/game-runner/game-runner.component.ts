@@ -13,8 +13,6 @@ export class GameRunnerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
   addUser(user: any): void {
     this.messageSer.publich(user);
     window.localStorage.setItem('user', JSON.stringify(user));
