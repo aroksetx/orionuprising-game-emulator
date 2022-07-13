@@ -15,10 +15,15 @@ import { GameUserListComponent } from './components/game-user-list/game-user-lis
 import { GameRunnerComponent } from './components/game-runner/game-runner.component';
 import {ArrayPipe} from './components/player-hand/number-to-array.pipe';
 import { MarketCardComponent } from './components/card/market-card/market-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
+
     RouterModule.forRoot(routes),
   ],
   declarations: [

@@ -1,9 +1,10 @@
-import {Component} from '@angular/core';
+import {Component, ViewContainerRef} from '@angular/core';
 import { PlanetType } from 'src/app/interfaces/planet-type';
 import { GameServiceService } from 'src/app/services/game-service/game-service.service';
 import {BoardState} from '../../interfaces/board.state';
 import {GameMasterService} from '../../services/game-master/game-master.service';
 import {ShuffleDeckStep} from '../../services/game-master/steps/shuffle-deck.step';
+import {MarketCardComponent} from '../../components/card/market-card/market-card.component';
 
 @Component({
     selector: 'app-game',
@@ -20,6 +21,7 @@ export class GameComponent {
     constructor(
         public gameMessenger: GameServiceService,
         private gameMaster: GameMasterService,
+        private viewContainerRef: ViewContainerRef,
     ) {
         this.init();
     }
@@ -56,6 +58,18 @@ export class GameComponent {
 
     openMarket() {
         this.showMarket = true;
+    }
+
+    closeMarket() {
+        this.showMarket = false;
+        let newCard = this.viewContainerRef.createComponent(MarketCardComponent);
+        newCard.instance.elementRef.nativeElement.style.top = '300px';
+        newCard.instance.elementRef.nativeElement.style.left = '700px';
+
+        setTimeout(() => {
+            newCard.instance.elementRef.nativeElement.style.top = '600px';
+            newCard.instance.elementRef.nativeElement.style.left = '1200px';
+        }, 500);
     }
 
     private updateCurrentStepName() {

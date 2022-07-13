@@ -4,6 +4,8 @@
 :host {
   position: relative;
   @include card();
+
+  transition: top 500ms, left 500ms;
 }
 
 .price {

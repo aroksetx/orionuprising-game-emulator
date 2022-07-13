@@ -1,17 +1,34 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import {OnNew} from '../../services/on-new.decorator';
+
+const ANIMATION_COUNT = 12;
 
 @Component({
   selector: 'app-dice',
   templateUrl: './dice.component.html',
   styleUrls: ['./dice.component.scss']
 })
-export class DiceComponent implements OnInit {
-  @Input() dice1: number = 2;
-  @Input() dice2: number = 5;
+export class DiceComponent {
+  @Input() @OnNew<DiceComponent, number>('onNewDices') dices: [number, number];
+  _dices: [number, number] = [3, 5];
 
   constructor() { }
 
-  ngOnInit(): void {
+  onNewDices() {
+    this.animateRollDices();
+  }
+
+  private animateRollDices() {
+    let count = 0;
+    let intervalId = setInterval(() => {
+      count++;
+      this._dices = [this.getRandomDice(), this.getRandomDice()];
+
+      if (count > ANIMATION_COUNT) {
+        clearInterval(intervalId);
+        this._dices = this.dices;
+      }
+    }, 150);
   }
 
   getClass(digit: number): string {
@@ -30,5 +47,9 @@ export class DiceComponent implements OnInit {
         return 'six';
     }
     return 'one'
+  }
+
+  private getRandomDice(): number {
+    return Math.floor(Math.random() * 6 + 1);
   }
 }

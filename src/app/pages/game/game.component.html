@@ -1,5 +1,5 @@
 <div class="header">Current step: {{stepName}}</div>
-<app-dice [dice1]="board.dices.dice1" [dice2]="board.dices.dice2"></app-dice>
+<app-dice [dices]="[board.dices.dice1, board.dices.dice2]"></app-dice>
 
 <!--<ng-template  [ngIf]="gameMessenger.users.length == 0" >-->
 <!--    <app-game-runner></app-game-runner>-->
@@ -37,7 +37,7 @@
         <h4>Market</h4>
         <i class="fa-solid fa-xmark" (click)="showMarket = false"></i>
     </div>
-    <div class="body" (click)="showMarket = false">
+    <div class="body" (click)="closeMarket()">
         <app-market-card></app-market-card>
         <app-market-card></app-market-card>
         <app-market-card></app-market-card>

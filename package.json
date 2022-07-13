@@ -21,6 +21,7 @@
     "@types/jsonwebtoken": "^8.5.8",
     "centrifuge": "^2.8.5",
     "jsonwebtoken": "^8.5.1",
+    "ngx-bootstrap": "8.0.0",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

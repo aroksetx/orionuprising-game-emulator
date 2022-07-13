@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-market-card',
@@ -9,7 +9,9 @@ export class MarketCardComponent implements OnInit {
   @Input() price = 5;
   name = 'Blokade';
 
-  constructor() { }
+  constructor(
+      public elementRef: ElementRef,
+  ) { }
 
   ngOnInit(): void {
   }

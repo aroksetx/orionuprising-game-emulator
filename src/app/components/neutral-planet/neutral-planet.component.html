@@ -1,9 +1,17 @@
 <!--<div class="activation">7</div>-->
 
-<i class="fa-regular" [ngClass]="type"></i>
+<div class="wrap" dropdown>
+    <div dropdownToggle>
+        <i class="fa-regular" [ngClass]="type"></i>
 
-<div class="protection">
-    <i class="fa-solid fa-shield-halved"></i>
-    <i class="fa-solid fa-shield-halved"></i>
-    <i class="fa-solid fa-shield-halved"></i>
+        <div class="protection">
+            <i class="fa-solid fa-shield-halved"></i>
+            <i class="fa-solid fa-shield-halved"></i>
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+    </div>
+
+    <div class="dropdown-menu" *dropdownMenu>
+        <div class="menu-item" (click)="capture()">Capture</div>
+    </div>
 </div>
