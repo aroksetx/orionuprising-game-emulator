@@ -49,6 +49,8 @@ export class GameComponent {
         ShuffleDeckStep.shuffle(this.board);
         this.gameMaster.init(this.board.players);
         this.updateCurrentStepName();
+
+        (<any>window).state = this.board;
     }
 
     nextTurn() {

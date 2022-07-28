@@ -13,15 +13,13 @@ export class GameUserListComponent implements OnInit {
   constructor(
       private messageSer: GameMessengerService,
       private gameMessenger: GameServiceService
-    ) {
-      this.users = this.gameMessenger.users;
-     }
+  ) {
+    this.users = this.gameMessenger.users;
+  }
 
   ngOnInit(): void {
     this.messageSer.getRoomUpdate().subscribe(({value}) => {
       this.gameMessenger.addUser(value);
-    })
-    
+    });
   }
-
 }

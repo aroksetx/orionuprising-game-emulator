@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "centrifugo": "centrifugo --config=centrifugo/config.json --admin"
   },
   "private": true,
   "dependencies": {
@@ -19,7 +20,6 @@
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
     "@types/jsonwebtoken": "^8.5.8",
-    "centrifuge": "^2.8.5",
     "jsonwebtoken": "^8.5.1",
     "ngx-bootstrap": "8.0.0",
     "node-polyfill-webpack-plugin": "^1.1.4",
@@ -32,6 +32,7 @@
     "@angular/cli": "~14.0.0",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
+    "centrifuge": "3.0.1",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

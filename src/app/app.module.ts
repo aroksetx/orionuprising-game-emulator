@@ -17,6 +17,7 @@ import {ArrayPipe} from './components/player-hand/number-to-array.pipe';
 import { MarketCardComponent } from './components/card/market-card/market-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import {CataclysmDeckComponent} from './components/cataclysm-deck/cataclysm-deck.component';
 
 @NgModule({
   imports: [
@@ -39,6 +40,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     GameRunnerComponent,
     ArrayPipe,
     MarketCardComponent,
+    CataclysmDeckComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

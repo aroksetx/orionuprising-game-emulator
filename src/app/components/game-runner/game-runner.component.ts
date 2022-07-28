@@ -14,7 +14,7 @@ export class GameRunnerComponent implements OnInit {
   }
 
   addUser(user: any): void {
-    this.messageSer.publich(user);
+    this.messageSer.publish(user);
     window.localStorage.setItem('user', JSON.stringify(user));
   }
 }
